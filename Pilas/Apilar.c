@@ -12,7 +12,11 @@
 
 PILA *Apilar(PILA *Pila,void *Elemento)
 {
-
+    PILA * ptrAuxiliar;
+    ptrAuxiliar->Elemento = Elemento;
+    ptrAuxiliar->Siguiente = Pila;
+    Pila = ptrAuxiliar;
+    return Pila;
     // Código del Alumno
     
 }

@@ -13,6 +13,6 @@
 bool EsPilaVacia(PILA *Pila)
 {
 
-    // Código del Alumno
+    return (Pila == NULL);
   
 }

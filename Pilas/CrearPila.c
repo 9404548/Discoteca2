@@ -11,6 +11,8 @@
 
 PILA *CrearPila()
 {
+    PILA* nuevaPila = NULL;
+    return nuevaPila;
 
     // Código del Alumno
   

@@ -12,7 +12,12 @@
 
 PILA *Desapilar(PILA *Pila,void **Elemento)
 {
-
+    PILA *ptrAuxiliar;
+    ptrAuxiliar = Pila->Siguiente;
+    Elemento = Pila;
+    /* free(Pila); */
+    Pila = ptrAuxiliar;
+    return Pila;
     // Código del Alumno
     
 }
