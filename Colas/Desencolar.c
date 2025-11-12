@@ -12,7 +12,20 @@
 
 void* Desencolar(COLA *Cola)
 {
-    
-    // Código del Alumno
-    
+    NODO * pAuxiliar;
+    // Elemento a borrar
+    void *ElementoAux;
+
+    // Si la cola esta vacia, NULL, si no, sigue
+    if(EsColaVacia(Cola))
+        return(NULL);
+    pAuxiliar = Cola->Cabecera;
+    ElementoAux = pAuxiliar->Elemento;
+    Cola->Cabecera = Cola->Cabecera->Siguiente;
+    // Verificar si se queda vacía despues de borrar
+    if(Cola->Cabecera == NULL){
+        Cola->Final == NULL;
+    }
+    free(pAuxiliar);
+    return(ElementoAux);
 }

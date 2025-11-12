@@ -12,7 +12,11 @@
 
 COLA *CrearCola()
 {
-    
-    // Código del Alumno
+    COLA* nuevaCola = malloc(sizeof(COLA));
+    if(nuevaCola!=NULL){
+        nuevaCola -> Cabecera = NULL;
+        nuevaCola -> Final = NULL;
+    }
+    return nuevaCola;
     
 }

@@ -1,4 +1,4 @@
-/*****************************************
+    /*****************************************
  * Nombre: InitOrden
  * Argumentos: LIBRO *Fichas:   Array de libros
  * Descripción: Genera un array con los punteros a los libros ordenados por
@@ -13,7 +13,18 @@
 
 DISCO **InitOrden(DISCO *Fichas)
 {
-    
-    // Código del alumno
+    int num_fichas = Estadisticas.NumeroFichas;
+    DISCO** orden = (DISCO**) malloc(num_fichas * sizeof(DISCO*));
+    int i;
+
+    if(orden == NULL){
+        return(NULL);
+    }
+
+    for(i=0; i<num_fichas; i++){
+        orden[i] = &Fichas[i];
+    }
+
+    return orden;
     
 }

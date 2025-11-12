@@ -14,7 +14,26 @@
 
 int Encolar(COLA *Cola, void *Elemento)
 {
-    
-    // Código del Alumno
+    NODO * pAuxiliar;
+
+    pAuxiliar = (NODO *) malloc(sizeof(NODO));
+    if(!pAuxiliar){
+        return(-1);
+    }
+
+    pAuxiliar->Elemento = Elemento;
+    pAuxiliar->Siguiente = NULL;
+
+    // pAuxiliar ahora apunta al nuevo nodo, no a null
+    Cola->Final->Siguiente = pAuxiliar;
+
+    // Actualizo la cola diciendo que existe un ultimo elemento nuevo que es el pAuxiliar
+    Cola->Final = pAuxiliar;
+
+    if(Cola->Cabecera == NULL){
+        Cola->Cabecera = pAuxiliar;
+    }
+
+    return(0);
     
 }

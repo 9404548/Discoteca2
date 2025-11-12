@@ -12,7 +12,10 @@
 
 void *ConsultarCola(COLA *Cola)
 {
-    
-    // Código del Alumno
+    if(!Cola){
+        return(NULL);
+    }else{
+       return(Cola->Cabecera->Elemento);
+    }
     
 }

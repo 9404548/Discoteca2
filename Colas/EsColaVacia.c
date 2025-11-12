@@ -12,7 +12,10 @@
 
 bool EsColaVacia(COLA *Cola)
 {
-    
-    // Código del Alumno
+    // Si cola es null
+    if (!Cola || !Cola->Cabecera)
+      return TRUE;
+    else
+      return FALSE;
     
 }
