@@ -11,6 +11,11 @@
 
 void *BorrarListaIzquierda(LISTA *Lista)
 {
+    if(EsListaVacia(Lista)) return NULL;
+
+    NODO * auxNodo = (NODO*) malloc(sizeof(NODO));
+    auxNodo = Lista -> Primero;
+    Lista -> Primero = Lista -> Primero -> Siguiente;
     
     // Código del Alumno
     

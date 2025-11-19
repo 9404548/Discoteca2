@@ -12,8 +12,17 @@
 #include "Listas.h"
 
 int InsertarListaDerecha(LISTA *Lista, void *Elemento)
-{
+{   
+    NODO *auxElemento = (NODO *)malloc(sizeof(NODO));
+
+    if(EsListaVacia(Lista) || !auxElemento) return (-1);
     
+    Lista -> Ultimo -> Siguiente = auxElemento;
+    Lista -> Ultimo = auxElemento;
+    auxElemento -> Elemento = Elemento; 
+    auxElemento -> Siguiente = NULL;
+
+    return (0);
     // Código del Alumno
-    
+
 }

@@ -11,11 +11,9 @@
 
 LISTA *CrearLista()
 {
-    LISTA  *Lista;
-    Lista = (LISTA *)malloc(sizeof(LISTA));
+    LISTA  *Lista = (LISTA *)malloc(sizeof(LISTA));
 
-    if(!Lista)
-    return NULL;
+    if(!Lista) return NULL;
 
     Lista->Primero = NULL;
     Lista->Ultimo = Lista->Primero;

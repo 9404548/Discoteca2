@@ -11,7 +11,18 @@
 
 int LongitudLista(LISTA *Lista)
 {
-    
+    if(EsListaVacia(Lista)) return (0); // Salida rápida si la lista está vacía.
+
+    NODO *auxElemento = Lista->Primero;
+    int contador = 0; // Inicializado a 1 por el primer elemento de la lista.
+    while(true){
+        contador++;
+        if(!(auxElemento->Siguiente)) break; //Sale del bucle si el Siguiente del elemento es NULL (se llegó al fin de la lista).
+        
+        auxElemento = auxElemento->Siguiente;
+
+    }
+
+    return contador;
     // Código del Alumno
-    
 }

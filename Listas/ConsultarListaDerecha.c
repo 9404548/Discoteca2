@@ -11,7 +11,7 @@
 
 void *ConsultarListaDerecha(LISTA *Lista)
 {
-    
+    return Lista -> Ultimo -> Elemento;
     // Código del Alumno
     
 }
