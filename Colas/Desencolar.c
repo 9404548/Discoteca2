@@ -13,6 +13,7 @@
 void* Desencolar(COLA *Cola)
 {
     NODO * pAuxiliar;
+    
     // Elemento a borrar
     void *ElementoAux;
 

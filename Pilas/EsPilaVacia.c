@@ -12,7 +12,5 @@
 
 bool EsPilaVacia(PILA *Pila)
 {
-
-    return (Pila == NULL);
-  
+    return (Pila == NULL); 
 }

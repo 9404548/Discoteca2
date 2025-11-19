@@ -13,10 +13,10 @@
 PILA *Desapilar(PILA *Pila,void **Elemento)
 {
     PILA *ptrAuxiliar;
-    ptrAuxiliar = Pila->Siguiente;
-    Elemento = Pila;
-    /* free(Pila); */
-    Pila = ptrAuxiliar;
+    ptrAuxiliar = Pila;
+    *Elemento = Pila;
+    Pila = Pila->Siguiente;
+    free(ptrAuxiliar);
     return Pila;
     // Código del Alumno
     
