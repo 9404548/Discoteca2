@@ -12,11 +12,14 @@
 
 PILA *Apilar(PILA *Pila,void *Elemento)
 {
-    PILA * ptrAuxiliar;
-    ptrAuxiliar->Elemento = Elemento;
-    ptrAuxiliar->Siguiente = Pila;
-    Pila = ptrAuxiliar;
-    return Pila;
+    PILA * ptrAuxiliar = malloc(sizeof(PILA));
+    if(EsPilaVacia(ptrAuxiliar)) {
+        return NULL;
+    }else {
+        ptrAuxiliar->Elemento = Elemento;
+        ptrAuxiliar->Siguiente = Pila;
+        return ptrAuxiliar;
+    }
     // Código del Alumno
     
 }
