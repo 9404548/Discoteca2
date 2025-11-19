@@ -13,7 +13,7 @@
 COLA *CrearCola()
 {
     COLA* nuevaCola = malloc(sizeof(COLA));
-    if(nuevaCola!=NULL){
+    if(nuevaCola){
         nuevaCola -> Cabecera = NULL;
         nuevaCola -> Final = NULL;
     }

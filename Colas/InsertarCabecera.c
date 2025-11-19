@@ -27,9 +27,7 @@ int InsertarCabecera(COLA *Cola, void *Elemento)
     // Actualizo la cola diciendo que existe un ultimo elemento nuevo que es el pAuxiliar
     Cola->Cabecera = pAuxiliar;
 
-    if(Cola->Final == NULL){
-        Cola->Final = pAuxiliar;
-    }
+    if(!(Cola->Final)) Cola->Final = pAuxiliar;
 
     return(0);
 }

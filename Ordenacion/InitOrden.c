@@ -1,11 +1,11 @@
     /*****************************************
  * Nombre: InitOrden
- * Argumentos: LIBRO *Fichas:   Array de libros
- * Descripción: Genera un array con los punteros a los libros ordenados por
+ * Argumentos: DISCO *Fichas:   Array de discos
+ * Descripción: Genera un array con los punteros a los discos ordenados por
  *              su orden numérico, es decir, el mismo orden el que están en
- *              en array de libros Fichas.
+ *              el array de discos Fichas.
  * Reglas de uso: Hay que alocar el espacio para el array de punteros
- * Código de Retorno: Puntero al array de punteros a los libros ordenados (LIBROS **)
+ * Código de Retorno: Puntero al array de punteros a los discos ordenados (discos **)
  * Programador:
  *****************************************/
 
@@ -17,14 +17,11 @@ DISCO **InitOrden(DISCO *Fichas)
     DISCO** orden = (DISCO**) malloc(num_fichas * sizeof(DISCO*));
     int i;
 
-    if(orden == NULL){
-        return(NULL);
-    }
+    if(!orden) return(NULL);
 
-    for(i=0; i<num_fichas; i++){
+    for(i = 0; i < num_fichas; i++){
         orden[i] = &Fichas[i];
     }
 
     return orden;
-    
 }

@@ -12,10 +12,7 @@
 
 void *ConsultarCola(COLA *Cola)
 {
-    if(!Cola){
-        return(NULL);
-    }else{
-       return(Cola->Cabecera->Elemento);
-    }
-    
+    if(!Cola) return(NULL);
+
+    return(Cola->Cabecera->Elemento);
 }

@@ -13,9 +13,7 @@
 bool EsColaVacia(COLA *Cola)
 {
     // Si cola es null
-    if (!Cola || !Cola->Cabecera)
-      return TRUE;
-    else
-      return FALSE;
-    
+    if (!Cola || !Cola->Cabecera) return TRUE;
+
+    return FALSE;
 }
