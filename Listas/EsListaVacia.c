@@ -12,7 +12,5 @@
 
 bool EsListaVacia(LISTA *Lista)
 {
-    
-    // Código del Alumno
-    
+    return((!Lista || !Lista->Primero));
 }

@@ -12,9 +12,11 @@
 
 void *ConsultarCola(COLA *Cola)
 {
+    // Cuando la cola es NULL
     if(!Cola){
         return(NULL);
     }else{
+        // Si no, se apunta al primer elemento de la cola
        return(Cola->Cabecera->Elemento);
     }
     

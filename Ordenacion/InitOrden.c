@@ -21,10 +21,13 @@ DISCO **InitOrden(DISCO *Fichas)
         return(NULL);
     }
 
+    // El array orden termina siendo un conjunto de punteros, por ejemplo, orden[0] apunta a Fichas[0],
+    // orden[1] a Fichas[1]...
     for(i=0; i<num_fichas; i++){
         orden[i] = &Fichas[i];
     }
 
+    // Termina devolviendo la "ordenacion" de los discos
     return orden;
     
 }
