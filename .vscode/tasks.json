@@ -20,9 +20,9 @@
                 "Colas\\*.c",
                 "-LC:\\mingw64\\opt\\lib",
                 "-lncursesw",
-                "Comun\\*.o",
+                /*"Comun\\*.o",
                 "Ficheros\\*.o",
-                "Ventanas\\*.o",
+                "Ventanas\\*.o",*/
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
