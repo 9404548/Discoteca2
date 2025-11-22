@@ -5,15 +5,15 @@
  * Reglas de uso: 
  * Código de Retorno: true  - La Cola no tiene elementos
  *                    false - La Cola tiene elementos
- * Programador:
+ * Programador: LXMDOC & MCP (NOV 2025)
  *****************************************/
 
 #include "Colas.h"
 
 bool EsColaVacia(COLA *Cola)
 {
-    // Si cola es null
+    // Si cola es null o su cabecera es null, es cola vacía
     if (!Cola || !Cola->Cabecera) return TRUE;
-
+    // No es cola vacía
     return FALSE;
 }

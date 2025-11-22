@@ -5,7 +5,7 @@
  *              No se modifica la Cola, solo se consulta
  * Reglas de uso: 
  * Código de Retorno: Puntero al primer elemento de la Cola o NULL si la cola está vacía
- * Programador:
+ * Programador: LXMDOC & MCP (NOV 2025)
  *****************************************/
 
 #include "Colas.h"

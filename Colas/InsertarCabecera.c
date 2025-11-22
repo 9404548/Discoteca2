@@ -6,7 +6,7 @@
  * Reglas de uso: La Cola tiene que estar creada
  * Código de Retorno:  0 - Éxito
  *                    -1 - La Cola no está creada o no se pudo alocar espacio nuevo
- * Programador:
+ * Programador: LXMDOC & MCP (NOV 2025)
  *****************************************/
 
 #include "Colas.h"
@@ -14,20 +14,22 @@
 int InsertarCabecera(COLA *Cola, void *Elemento)
 {
     NODO * pAuxiliar;    
+    // Se pide espacio para insertar un nuevo nodo en la cima de la cola
     pAuxiliar = (NODO *) malloc(sizeof(NODO));
-    if(!pAuxiliar){
-        return(-1);
-    }
 
+    // Se devuelve -1 si falló la petición de memoria o si no está creada la cola
+    if(!pAuxiliar || !Cola) return(-1);
+
+    // El elemento en el nodo es el aportado en la llamada a la función
     pAuxiliar->Elemento = Elemento;
-    // Apunto a la primera posicion de la cola, ya que antes estaba en el segundo porque hemos metido uno nuevo
+    // El siguiente de este nodo será la actual cabecera de la cola
     pAuxiliar->Siguiente = Cola->Cabecera;
-
-
-    // Actualizo la cola diciendo que existe un ultimo elemento nuevo que es el pAuxiliar
+    // Ahora se actualiza la cabecera de la cola, indicando que es este nuevo nodo
     Cola->Cabecera = pAuxiliar;
 
-    if(!(Cola->Final)) Cola->Final = pAuxiliar;
+    // Si el final de la cola estaba a NULL (no había elementos), entonces el final es igual inicio de la cola
+    if(!Cola->Final) Cola->Final = pAuxiliar; 
 
+    // devolución con éxito
     return(0);
 }
