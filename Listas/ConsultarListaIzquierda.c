@@ -4,7 +4,7 @@
  * Descripción: Consulta el elemento a la izquierda de Lista. No se elimina el elemento
  * Reglas de uso: 
  * Código de Retorno: Puntero al elemento a la izquierda de la Lista 
- * Programador:
+ * Programador: LXMDOC (NOV 2025)
  *****************************************/
 
 #include "Listas.h"

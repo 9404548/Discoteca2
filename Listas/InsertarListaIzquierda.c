@@ -6,17 +6,17 @@
  * Reglas de uso: 
  * Código de Retorno:  0 - Éxito
  *                    -1 - La lista no está creada o no se ha podido alocar memoria nueva
- * Programador:
+ * Programador: LXMDOC (NOV 2025)
  *****************************************/
 
 #include "Listas.h"
 
 int InsertarListaIzquierda(LISTA *Lista, void *Elemento)
 {
-    // Se crea el nodo para el elemento auxiliar
+    // Se crea el nodo para el elemento a insertar en la lista
     NODO *auxElemento = (NODO *)malloc(sizeof(NODO));
 
-    // Si la lista esta vacia o el elemento auxiliar es NULL, devuelve -1
+    // Si la lista esta vacia o el elemento auxiliar no se pudo crear, devuelve -1
     if(EsListaVacia(Lista) || !auxElemento) return (-1);
     
     // Se asigna al elemento auxiliar el elemento a insertar
@@ -28,6 +28,6 @@ int InsertarListaIzquierda(LISTA *Lista, void *Elemento)
     // Se actualiza el puntero al primer elemento de la lista
     Lista -> Primero = auxElemento;
 
-    // Devuelve 0 si se ha insertado correctamente el elemento
+    // Devolución con éxito
     return (0);
 }

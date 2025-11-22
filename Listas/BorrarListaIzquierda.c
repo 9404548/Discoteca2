@@ -4,7 +4,7 @@
  * Descripción: Borra un elemento de Lista a la izquierda.
  * Reglas de uso: 
  * Código de Retorno: Puntero al elemento que se ha borrado o NULL si no había elementos
- * Programador:
+ * Programador: LXMDOC (NOV 2025)
  *****************************************/
 
 #include "Listas.h"
@@ -17,12 +17,12 @@ void *BorrarListaIzquierda(LISTA *Lista)
     // Se crea un nodo auxiliar para borrar el primer elemento de la lista
     NODO * auxNodo = (NODO*) malloc(sizeof(NODO));
 
-    // El puntero ahora apunta al primer elemento de la lista
+    // auxNodo apunta al primer elemento de la lista
     auxNodo = Lista -> Primero;
 
-    // El primer elemento de la lista es el que se va a borrar, luego por eso ahora el primer elemento de la lista es el siguiente
+    // El nuevo primer elemento es el que el original primero tenía como siguiente
     Lista -> Primero = Lista -> Primero -> Siguiente;
 
-    // Se devuelve el puntero al elemento que se ha borrado
+    // Se devuelve el puntero al elemento que se ha desenlazado de la lista
     return auxNodo;
 }

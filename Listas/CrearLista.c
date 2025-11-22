@@ -4,16 +4,17 @@
  * Descripción: Crea una Lista vacía
  * Reglas de uso: 
  * Código de Retorno: Puntero a la Lista creada (vacía)
- * Programador:
+ * Programador: LXMDOC (NOV 2025)
  *****************************************/
 
 #include "Listas.h"
 
 LISTA *CrearLista()
 {
+    // Se crea la lista pidiendo espacio para ella
     LISTA  *Lista = (LISTA *)malloc(sizeof(LISTA));
 
-    // Si no hay nada en la lista, devuelve NULL
+    // Si falló la creación de la lista, se devuelve NULL
     if(!Lista) return NULL;
 
     // Se inicializan los punteros de la lista a NULL
