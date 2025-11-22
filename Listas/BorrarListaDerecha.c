@@ -11,12 +11,17 @@
 
 void *BorrarListaDerecha(LISTA *Lista)
 {
+    // Si la lista esta vacia, devuelve NULL
     if(EsListaVacia(Lista)) return NULL;
 
+    // En estas dos lineas se crean dos nodos auxiliares para recorrer la lista y borrar el último elemento
     NODO * pAuxNodo = (NODO*) malloc(sizeof(NODO));
     NODO * qAuxNodo = (NODO*) malloc(sizeof(NODO));
+
+    // Se inicializa el puntero al primer elemento de la lista
     pAuxNodo = Lista -> Primero;
 
+    
     while(true){
         if((pAuxNodo->Siguiente == Lista->Ultimo)){
             Lista ->Ultimo = pAuxNodo;   

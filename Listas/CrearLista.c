@@ -13,10 +13,13 @@ LISTA *CrearLista()
 {
     LISTA  *Lista = (LISTA *)malloc(sizeof(LISTA));
 
+    // Si no hay nada en la lista, devuelve NULL
     if(!Lista) return NULL;
 
+    // Se inicializan los punteros de la lista a NULL
     Lista->Primero = NULL;
     Lista->Ultimo = Lista->Primero;
     
+    // Devuelve la lista creada
     return Lista;
 }

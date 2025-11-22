@@ -11,12 +11,18 @@
 
 void *BorrarListaIzquierda(LISTA *Lista)
 {
+    // Si la lista esta vacia, devuelve NULL
     if(EsListaVacia(Lista)) return NULL;
 
+    // Se crea un nodo auxiliar para borrar el primer elemento de la lista
     NODO * auxNodo = (NODO*) malloc(sizeof(NODO));
+
+    // El puntero ahora apunta al primer elemento de la lista
     auxNodo = Lista -> Primero;
+
+    // El primer elemento de la lista es el que se va a borrar, luego por eso ahora el primer elemento de la lista es el siguiente
     Lista -> Primero = Lista -> Primero -> Siguiente;
+
+    // Se devuelve el puntero al elemento que se ha borrado
     return auxNodo;
-    // Código del Alumno
-    
 }

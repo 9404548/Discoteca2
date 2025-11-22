@@ -12,5 +12,6 @@
 
 bool EsListaVacia(LISTA *Lista)
 {
+    // Devuelve true si la lista no existe o el primer elemento es NULL
     return((!Lista || !Lista->Primero));
 }

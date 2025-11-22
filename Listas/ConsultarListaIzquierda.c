@@ -11,7 +11,6 @@
 
 void *ConsultarListaIzquierda(LISTA *Lista)
 {
-    return Lista -> Primero -> Elemento;
-    // Código del Alumno
-    
+    // Devuelve el puntero al elemento que esta en la izquierda de la lista
+    return Lista -> Primero -> Elemento;    
 }
