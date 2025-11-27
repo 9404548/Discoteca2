@@ -14,11 +14,11 @@ COLA *CrearCola()
 {
     
     // Se pide espacio en memoria para crear la cola
-    COLA* nuevaCola = malloc(sizeof(COLA)); 
+    COLA* nuevaCola = (COLA *)malloc(sizeof(COLA)); 
 
     /* Si es distinto de null (la cola se creó con éxito en el malloc)
     definimos su cabecera y final como null (ya que está vacía) */
-    if(nuevaCola){
+    if(nuevaCola != NULL){
         nuevaCola -> Cabecera = NULL;
         nuevaCola -> Final = NULL;
     }

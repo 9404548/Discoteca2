@@ -50,6 +50,8 @@ void ImportarFichero(DISCO **Fichas, WINDOW *Wfichero, bool sumar)
     }
 
     // Limpio la ventana
+    werase(Wfichero);
+    DibujarGestionFichero(Wfichero);
     wcolor_set(Wfichero, 9, NULL);
     mvwprintw(Wfichero, 2, 22, "                                                   ");
     mvwprintw(Wfichero, 3, 18, "                ");

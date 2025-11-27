@@ -14,28 +14,30 @@
 
 int Encolar(COLA *Cola, void *Elemento)
 {
-    NODO * pAuxiliar;
+    // Comprueba argumentos
+    if (Cola == NULL) return -1;
 
     // Pedimos memoria para un nodo nuevo en la cola
-    pAuxiliar = (NODO *) malloc(sizeof(NODO));
+    NODO *pAuxiliar = malloc(sizeof(NODO));
 
     // Si falló la alocación de espacio o no existe la cola, devolvemos -1 
-    if(!pAuxiliar || !Cola) return(-1);
+    if(pAuxiliar == NULL) return(-1);
     
     // Se asigna al nodo el elemento a encolar
     pAuxiliar->Elemento = Elemento;
-    // Se asigna al nodo que su siguiente es null, ya que será el último elemento de la cola
     pAuxiliar->Siguiente = NULL;
 
-    // El nodo pAuxiliar se asigna como el elemento siguiente al actual fin de la cola
-    Cola->Final->Siguiente = pAuxiliar;
+    /* Si la cola está vacía, el nuevo nodo es cabecera y final;
+       si no, enlazamos al final existente */
+    if (EsColaVacia(Cola)) {
+        Cola->Cabecera = pAuxiliar;
+    } else {
+        Cola->Final->Siguiente = pAuxiliar;
+    }
 
     // Se actualiza el final de la cola y se define como pAuxiliar
     Cola->Final = pAuxiliar;
 
-    // Si la cabecera estaba NULL (no había elementos encolados) ahora la cabecera es también pAuxiliar
-    if(!Cola->Cabecera) Cola->Cabecera = pAuxiliar;
-    // retorno con éxito
-    return(0);
+    return 0;
     
 }

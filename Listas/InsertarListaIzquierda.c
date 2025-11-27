@@ -16,8 +16,8 @@ int InsertarListaIzquierda(LISTA *Lista, void *Elemento)
     // Se crea el nodo para el elemento a insertar en la lista
     NODO *auxElemento = (NODO *)malloc(sizeof(NODO));
 
-    // Si la lista esta vacia o el elemento auxiliar no se pudo crear, devuelve -1
-    if(EsListaVacia(Lista) || !auxElemento) return (-1);
+    // Si la lista no está creada o el elemento auxiliar no se pudo crear, devuelve -1
+    if(Lista == NULL || !auxElemento) return (-1);
     
     // Se asigna al elemento auxiliar el elemento a insertar
     auxElemento -> Elemento = Elemento;
@@ -27,6 +27,9 @@ int InsertarListaIzquierda(LISTA *Lista, void *Elemento)
 
     // Se actualiza el puntero al primer elemento de la lista
     Lista -> Primero = auxElemento;
+
+    // Si la lista estaba vacía, el puntero Ultimo también debe apuntar al nuevo nodo
+    if (Lista->Ultimo == NULL) Lista->Ultimo = auxElemento;
 
     // Devolución con éxito
     return (0);

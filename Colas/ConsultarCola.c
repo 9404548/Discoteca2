@@ -13,7 +13,7 @@
 void *ConsultarCola(COLA *Cola)
 {
     // Si la cola no existe, devuelve NULL
-    if(!Cola) return(NULL);
+    if(Cola == NULL) return(NULL);
 
     // Si hay elementos en la cola, devuelve el primero
     return(Cola->Cabecera->Elemento);

@@ -13,7 +13,7 @@
 bool EsColaVacia(COLA *Cola)
 {
     // Si cola es null o su cabecera es null, es cola vacía
-    if (!Cola || !Cola->Cabecera) return TRUE;
+    if (Cola == NULL || Cola->Cabecera == NULL) return true;
     // No es cola vacía
-    return FALSE;
+    return false;
 }

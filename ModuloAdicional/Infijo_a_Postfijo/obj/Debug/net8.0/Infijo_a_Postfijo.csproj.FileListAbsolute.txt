@@ -1,0 +1,14 @@
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\bin\Debug\net8.0\Infijo_a_Postfijo.exe
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\bin\Debug\net8.0\Infijo_a_Postfijo.deps.json
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\bin\Debug\net8.0\Infijo_a_Postfijo.runtimeconfig.json
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\bin\Debug\net8.0\Infijo_a_Postfijo.dll
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\bin\Debug\net8.0\Infijo_a_Postfijo.pdb
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\Infijo_a_Postfijo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\Infijo_a_Postfijo.AssemblyInfoInputs.cache
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\Infijo_a_Postfijo.AssemblyInfo.cs
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\Infijo_a_Postfijo.csproj.CoreCompileInputs.cache
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\Infijo_a_Postfijo.dll
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\refint\Infijo_a_Postfijo.dll
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\Infijo_a_Postfijo.pdb
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\Infijo_a_Postfijo.genruntimeconfig.cache
+C:\Users\carat\OneDrive\Documentos\EDA\Infijo_a_Postfijo\obj\Debug\net8.0\ref\Infijo_a_Postfijo.dll

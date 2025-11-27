@@ -18,7 +18,7 @@ int InsertarCabecera(COLA *Cola, void *Elemento)
     pAuxiliar = (NODO *) malloc(sizeof(NODO));
 
     // Se devuelve -1 si falló la petición de memoria o si no está creada la cola
-    if(!pAuxiliar || !Cola) return(-1);
+    if(pAuxiliar == NULL || Cola == NULL) return(-1);
 
     // El elemento en el nodo es el aportado en la llamada a la función
     pAuxiliar->Elemento = Elemento;
@@ -28,7 +28,7 @@ int InsertarCabecera(COLA *Cola, void *Elemento)
     Cola->Cabecera = pAuxiliar;
 
     // Si el final de la cola estaba a NULL (no había elementos), entonces el final es igual inicio de la cola
-    if(!Cola->Final) Cola->Final = pAuxiliar; 
+    if(Cola->Final == NULL) Cola->Final = pAuxiliar; 
 
     // devolución con éxito
     return(0);

@@ -16,12 +16,10 @@ PILA *Apilar(PILA *Pila,void *Elemento)
     PILA * ptrAuxiliar = malloc(sizeof(PILA));
     // Si falló la petición de memoria devolvemos NULL
     if(EsPilaVacia(ptrAuxiliar)) return NULL;
-    else {
-        // El elemento del nodo es el Elemento aportado en la llamada
-        ptrAuxiliar->Elemento = Elemento;
-        // El elemento siguiente a este nodo es la anterior cima de la pila
-        ptrAuxiliar->Siguiente = Pila;
-        // Se devuele el puntero a la cima de la pila
-        return ptrAuxiliar;
-    }   
+    // El elemento del nodo es el Elemento aportado en la llamada
+    ptrAuxiliar->Elemento = Elemento;
+    // El elemento siguiente a este nodo es la anterior cima de la pila
+    ptrAuxiliar->Siguiente = Pila;
+    // Se devuele el puntero a la cima de la pila
+    return ptrAuxiliar;
 }

@@ -15,25 +15,24 @@ void* Desencolar(COLA *Cola)
     NODO * pAuxiliar;
     
     // Elemento a borrar
-    void *ElementoAux;
-
-    // Si la cola esta vacia, devuelve NULL sin revisar más
-    if(EsColaVacia(Cola)) return(NULL);
+    void *elementoAux;
+    // Comprueba existencia de cola y sus contenidos
+    if (Cola == NULL || EsColaVacia(Cola)) return NULL;
 
     // El nodo auxiliar apunta a la cabecera de la cola
     pAuxiliar = Cola->Cabecera;
 
-    // El elemento a borrar es el que está en la cabecera de la cola
-    ElementoAux = pAuxiliar->Elemento;
+    // Guardamos el elemento que devolveremos
+    elementoAux = pAuxiliar->Elemento;
 
-    // La cabecera de la cola ahora es el nodo siguiente a la anterior cabecera
-    Cola->Cabecera = Cola->Cabecera->Siguiente;
+    // Avanzamos la cabecera al siguiente nodo
+    Cola->Cabecera = pAuxiliar->Siguiente;
 
-    // Verificar si ha quedado vacía la cola despues de borrar
-    if(!Cola->Cabecera) Cola->Final == NULL;
-    // Ya no hacemos uso del nodo auxiliar
-    free(pAuxiliar);
+    // Si la cola ha quedado vacía, actualizamos Final a NULL
+    if (Cola->Cabecera == NULL) {
+        Cola->Final = NULL;
+    }
 
     // Devolvemos un puntero al elemento que eliminamos de la cola
-    return(ElementoAux);
+    return(elementoAux);
 }

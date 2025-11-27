@@ -12,12 +12,23 @@
 
 PILA *Desapilar(PILA *Pila,void **Elemento)
 {
-    // El puntero al elemento contiene la antigua cima de la pila (el elemento desapilado)
-    *Elemento = Pila;
-    // La nueva cima de la pila es ahora el siguiente elemento a la original cima
-    Pila = Pila->Siguiente;
-    // Se llibera el espacio que ocupaba la antigua cima de la pila
-    free(*Elemento);
-    // Se devuelve el puntero a lla cima actual de la pila
-    return Pila;
+    //Comprueba pila vacía
+    if (EsPilaVacia(Pila)) {
+        *Elemento = NULL;
+        return NULL;
+    }
+
+    // Guarda el nodo cima y el elemento a devolver
+    NODO *pNodo = Pila;
+    void *elem = pNodo->Elemento;
+
+    // Avanza la cima de la pila
+    PILA *nuevaCima = Pila->Siguiente;
+
+    // Libera el nodo desapilado, pero el elemento sigue guardado 
+    free(pNodo);
+
+    // Devuelve el elemento mediante el puntero de salida y devuelve la nueva cima.
+    *Elemento = elem;
+    return nuevaCima;
 }

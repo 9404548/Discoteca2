@@ -14,15 +14,17 @@ void *BorrarListaIzquierda(LISTA *Lista)
     // Si la lista esta vacia, devuelve NULL
     if(EsListaVacia(Lista)) return NULL;
 
-    // Se crea un nodo auxiliar para borrar el primer elemento de la lista
-    NODO * auxNodo = (NODO*) malloc(sizeof(NODO));
+    // Extraemos el primer nodo y devolvemos su elemento
+    NODO *auxNodo = Lista->Primero;
+    void *elemento = auxNodo->Elemento;
 
-    // auxNodo apunta al primer elemento de la lista
-    auxNodo = Lista -> Primero;
+    // Avanzamos el Primero de la lista
+    Lista->Primero = auxNodo->Siguiente;
 
-    // El nuevo primer elemento es el que el original primero tenía como siguiente
-    Lista -> Primero = Lista -> Primero -> Siguiente;
+    // Si la lista queda vacía, actualizamos Ultimo
+    if (Lista->Primero == NULL) Lista->Ultimo = NULL;
 
-    // Se devuelve el puntero al elemento que se ha desenlazado de la lista
-    return auxNodo;
+    // Liberamos el nodo y devolvemos el elemento
+    free(auxNodo);
+    return elemento;
 }

@@ -14,23 +14,22 @@
 int InsertarListaDerecha(LISTA *Lista, void *Elemento)
 {   
     // Se crea un nodo para el elemento auxiliar
-    NODO *auxElemento = (NODO *)malloc(sizeof(NODO));
+    NODO *auxElemento = malloc(sizeof(NODO));
+    if (!auxElemento) return -1;
 
-    // Si la lista esta vacia o falló la creación del nuevo elemento, devuelve -1
-    if(EsListaVacia(Lista) || !auxElemento) return (-1);
-    
-    // Se pone el elemento auxiliar al final de la lista
-    Lista -> Ultimo -> Siguiente = auxElemento;
+    // Inicializa el nuevo nodo
+    auxElemento->Elemento = Elemento;
+    auxElemento->Siguiente = NULL;
 
-    // Se actualiza el puntero al ultimo elemento de la lista
-    Lista -> Ultimo = auxElemento;
+    // Si la lista está vacía, el nuevo nodo es primero y último
+    if (EsListaVacia(Lista)) {
+        Lista->Primero = auxElemento;
+        Lista->Ultimo = auxElemento;
+    } else {
+        // Enlista al final
+        Lista->Ultimo->Siguiente = auxElemento;
+        Lista->Ultimo = auxElemento;
+    }
 
-    // Se asigna al elemento auxiliar el elemento aportado en la llamada
-    auxElemento -> Elemento = Elemento; 
-
-    // El elemento siguiente del puntero elemento auxiliar es NULL ya que se ha insertado un elemento al final de la lista
-    auxElemento -> Siguiente = NULL;
-
-    // Devolución con éxito
     return (0);
 }
